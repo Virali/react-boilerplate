@@ -37,11 +37,14 @@ const config: Configuration = {
       filename: "index.html",
       template: "src/index.html",
     }),
+    new ForkTsCheckerWebpackPlugin({
+      async: false,
+    }),
   ],
   output: {
     path: path.join(__dirname, "build"),
     filename: "bundle.js",
-    publicPath: '/',
+    publicPath: "/",
     clean: true,
   },
   devServer: {
