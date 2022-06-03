@@ -11,6 +11,7 @@ interface Configuration extends WebpackConfiguration {
 const config: Configuration = {
   entry: "./src/App.tsx",
   mode: "development",
+  devtool: "cheap-module-source-map",
   module: {
     rules: [
       {
