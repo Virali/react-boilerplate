@@ -1,7 +1,6 @@
 {
-  "name": "react_ts_boilerplate",
+  "name": "cjm-retention",
   "version": "1.0.0",
-  "description": "repo with needed packages for running react with ts",
   "dependencies": {
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -23,31 +22,32 @@
     "@typescript-eslint/parser": "^5.24.0",
     "babel-loader": "^8.2.5",
     "eslint": "^8.15.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.5.0",
     "fork-ts-checker-webpack-plugin": "^7.2.11",
     "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
     "path": "^0.12.7",
+    "prettier": "^2.6.2",
     "ts-loader": "^9.3.0",
     "ts-node": "^10.7.0",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.0"
   },
-  "main": "App.tsx",
   "scripts": {
-    "start": "webpack serve",
+    "start": "webpack serve --open",
     "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Virali/react_ts_boilerplate.git"
-  },
-  "author": "Virali",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Virali/react_ts_boilerplate/issues"
-  },
-  "homepage": "https://github.com/Virali/react_ts_boilerplate#readme"
+  "engines": {
+    "node": ">=16"
+  }
 }
