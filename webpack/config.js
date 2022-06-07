@@ -5,11 +5,10 @@ const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+  context: path.resolve(__dirname, '../'),
   entry: {
     app: ["./src/app/App.tsx"],
   },
-  mode: "development",
-  devtool: "source-map",
   module: {
     rules: [
       {
@@ -58,7 +57,7 @@ module.exports = {
     }),
   ],
   output: {
-    path: path.join(__dirname, "build"),
+    path: path.resolve(__dirname, "../build"),
     filename: "bundle.[contenthash].js",
     publicPath: "/",
     clean: true,
