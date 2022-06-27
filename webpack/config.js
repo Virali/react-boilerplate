@@ -2,10 +2,10 @@ const path = require("path");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  context: path.resolve(__dirname, '../'),
+  context: path.resolve(__dirname, "../"),
   entry: {
     app: ["./src/app/App.tsx"],
   },
@@ -14,7 +14,7 @@ module.exports = {
       {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules[\/\\](?!@iq[\/\\](ui|utils))/,
-        loader: 'ts-loader',
+        loader: "ts-loader",
         options: {
           allowTsInNodeModules: true,
         },
@@ -35,11 +35,11 @@ module.exports = {
       },
       {
         test: /\.(eot|ttf|woff|woff2|png|ico)$/,
-        use: ['file-loader'],
+        use: ["file-loader"],
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
     ],
   },
@@ -55,6 +55,7 @@ module.exports = {
     new ForkTsCheckerWebpackPlugin({
       async: false,
     }),
+    new MiniCssExtractPlugin(),
   ],
   output: {
     path: path.resolve(__dirname, "../build"),

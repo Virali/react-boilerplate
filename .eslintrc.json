@@ -8,12 +8,24 @@
     "airbnb",
     "airbnb-typescript",
     "prettier",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:react/recommended"
   ],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
+    "react/jsx-no-bind": [
+      "error",
+      {
+        "allowFunctions": true
+      }
+    ],
+    "no-plusplus": "off",
+    "no-param-reassign": "off",
+    "prefer-arrow-callback": "off",
+    "@typescript-eslint/no-use-before-define": "off"
   },
   "settings": {
     "react": {
